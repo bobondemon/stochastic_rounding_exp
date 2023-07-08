@@ -1,5 +1,5 @@
 
-Try to implement AdaRound
+Try to implement reproduce numbers in Table 1 in paper "[Up or Down? Adaptive Rounding for Post-Training Quantization](https://arxiv.org/abs/2004.10568)"
 
 # Usage
 
@@ -13,27 +13,9 @@ torchmetrics           0.11.0
 torchvision            0.11.2+cu102
 ```
 
-## How to Train
-
-
-- Training from scratch
-    ```
-    python train.py ckpt_path=null resume_training=false
-    ```
-- Resume training from ckpt
-    ```
-    python train.py ckpt_path=path_of_ckpt/last.ckpt resume_training=true
-    ```
-
-
-## How to Test
-```
-python test.py ckpt_path=path_of_ckpt/last.ckpt
-```
-
-## Monitoring with tensorboard
-```
-tensorboard --logdir ./outputs/train/tblog/lightning_logs/
-```
+## How to Run
+Run experiments
+`python main.py`
 
 # Results
+See `doc/analyze_rounding.xlsx`
